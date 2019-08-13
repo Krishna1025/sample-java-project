@@ -20,5 +20,11 @@ pipeline {
         }
       }
     }
+    stage('deploy to artifact') {
+      steps {
+        archiveArtifacts 'test'
+        bat 'mvn deploy'
+      }
+    }
   }
 }
