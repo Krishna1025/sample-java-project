@@ -10,12 +10,12 @@ pipeline {
       parallel {
         stage('compile') {
           steps {
-            bat 'mvn compile'
+            bat 'REM mvn compile'
           }
         }
         stage('build') {
           steps {
-            bat 'mvn package'
+            bat 'REM mvn package'
           }
         }
       }
